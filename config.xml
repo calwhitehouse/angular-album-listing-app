@@ -1,0 +1,6 @@
+<config>
+   <title>Author Information</title>
+   <username></username>
+   <password></password>
+   <dns>sqlite:C:\MAMP\htdocs\cm0665-assignment\server\it_musicNew.sqlite</dns>
+</config>

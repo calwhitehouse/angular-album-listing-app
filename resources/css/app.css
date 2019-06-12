@@ -1,0 +1,236 @@
+body {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1.1em;
+    margin: 0;
+}
+.container {
+    width: 50%;
+    float: left;
+}
+img.center {
+    width: 200px!important;
+    height: auto;
+}
+/*positioning*/
+.centre {
+    text-align: center;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.position {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+.right {
+    float: right;
+}
+.left {
+    float: left;
+}
+.ml {
+    margin-left: .75em;
+}
+/*album styling*/
+.selected, .selected a {
+    color: lightcoral !important;
+    font-style: italic;
+}
+
+.album {
+    -moz-box-shadow:    0px 2px 4px rgba(0, 0, 0, 0.18);
+    -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.18);
+    box-shadow: 		0px 2px 4px rgba(0, 0, 0, 0.18);
+    background-color: #fafafa;
+    position: relative;
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: 1em;
+}
+
+.genre {
+    color: #ffffff;
+    background-color: lightcoral;
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    padding: 0.2em;
+    border-radius: 3px;
+}
+.grey {
+    color: gray;
+}
+
+.trackListing {
+    padding: 0.75em;
+    -moz-box-shadow:    0px 2px 4px rgba(0, 0, 0, 0.18);
+    -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.18);
+    box-shadow: 		0px 2px 4px rgba(0, 0, 0, 0.18);
+    margin-left: 1em;
+    background-color: #fafafa;
+    min-width: 50%;
+    margin-right: 1em;
+}
+/*note styling*/
+.notes {
+    margin-top: 1em;
+}
+.addNote {
+    background-color: lightcoral;
+    display: inline-block;
+    margin-top: 1em;
+    margin-left: 24%;
+    padding: 0.75em;
+    color: white;
+    /*border-radius: 5px;*/
+    -moz-box-shadow:    0px 2px 4px rgba(0, 0, 0, 0.18);
+    -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.18);
+    box-shadow: 		0px 2px 4px rgba(0, 0, 0, 0.18);
+    text-decoration: none;
+
+}
+textarea {
+    width: 75%;
+    resize: vertical;
+    border: 2px solid lightcoral;
+    border-radius: 3px;
+    outline: none;
+    padding-left: 0.25em;
+}
+textarea:focus {
+    border: 2px solid #eb5252;
+    outline: none;
+    background-color: lightcoral;
+    color: white;
+}
+.addNoteButton {
+    position: relative;
+    bottom: 10px;
+}
+/*search*/
+.search {
+    width: 360px;
+    padding-left: 0.25em;
+    margin-top: 20px;
+    margin-left: 1em;
+}
+.searchButton, .editNote {
+    outline: none;
+    line-height: 1.5em;
+    border-radius: 3px;
+    margin-top: 10px;
+    background-color: white;
+    color: lightcoral;
+    border: 2px solid lightcoral;
+}
+.searchButton:hover, .editNote:hover {
+    background-color: lightcoral;
+    color: white;
+}
+.searchButton:focus, .editNote:focus {
+    background-color: lightcoral;
+    color: white;
+}
+/*select*/
+select {
+    margin-left: .5em;
+    line-height: 1.5em;
+    border: 2px solid lightcoral;
+    border-radius: 3px;
+    width: 251px;
+    margin-top: 10px;
+}
+select:focus {
+    outline: none;
+}
+option {
+    line-height: 1.5em;
+}
+.label {
+    font-size: .9em;
+    margin-left: 1em;
+}
+/*navigation*/
+nav {
+    background-color: #fce5e5;
+    border-bottom: 2px solid #f9cccc;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+}
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.active {
+    color: #a85959;
+}
+li a:hover {
+    color: #eb5252;
+}
+
+/*Login Form/Logout*/
+.loginForm {
+    float: right;
+    position: relative;
+    top: 0px;
+    margin-top: 1em;
+}
+input[type=text], input[type=password] {
+    border: 2px solid lightcoral;
+    line-height: 1.5em;
+    border-radius: 3px;
+    padding-left: 0.25em;
+}
+input[type=text]:focus, input[type=password]:focus {
+    border: 2px solid #eb5252;
+    outline: none;
+    background-color: lightcoral;
+    color: white;
+}
+
+.login {
+    background-color: white;
+    color: lightcoral;
+    border: 2px solid lightcoral;
+    line-height: 1.5em;
+    border-radius: 3px;
+    margin-right: 1em;
+}
+.login:focus, .logout:focus {
+    outline: none;
+    background-color: lightcoral;
+    color: white;
+}
+.login:hover, .logout:hover {
+    background-color: lightcoral;
+    color: white;
+}
+.logout {
+    margin-top: 1.25em;
+    background-color: white;
+    color: lightcoral;
+    border: 2px solid lightcoral;
+    line-height: 1.5em;
+    border-radius: 3px;
+    margin-right: 1em;
+}
+.user {
+    margin-top: 1em;
+    margin-right: .75em;
+}

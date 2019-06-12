@@ -1,0 +1,35 @@
+<!--Partial containing search, genre filter and album display-->
+<!--Search-->
+<form data-ng-submit="searchAlbums(search.term)">
+    <input class="search" type='text' name='search' id='search' data-ng-model="search.term" placeholder='Enter your search term here'>
+    <input class="searchButton" type='submit' value='Search'>
+</form>
+<!--Genre-->
+<section>
+    <label class="label" for="genreList">Filter by genre:</label>
+    <select data-ng-model="genre_id" data-ng-click="getAlbumsByGenre(genre_id)" id="genreList" name="genreList" >
+        <option value="">Select Genre</option>
+        <option data-ng-repeat="genre in genres" value="{{genre.genre_id}}">{{genre.genre}}</option>
+
+    </select>
+</section>
+<!--Album Display-->
+<section>
+    <div class="container">
+        <h2 class="centre">{{subTitle}}</h2>
+        <h3 class="centre">{{albumCount}}</h3>
+        <div data-ng-show="albums">
+            <div data-ng-model="albums" class="album" data-ng-repeat="album in albums"
+            data-ng-click="selectAlbum($event, album); getNotes($event, album)"
+            data-ng-class="{'selected':selectedAlbum.album_id===album.album_id}"
+            style="cursor: pointer;">
+                <div><span class="grey">Album:</span> {{album.album}}</div>
+                <div><span class="grey">Artist:</span> {{album.artistname}}</div>
+                <div><span class="grey">Year:</span> {{album.year}}</div>
+                <div><span class="grey">Playing Time:</span> {{album.total_time | date:'H:mm:ss'}}</div>
+                <div class=" genre">{{album.genre}}</div>
+            </div>
+        </div>
+    </div>
+
+</section>

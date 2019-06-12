@@ -1,0 +1,42 @@
+<!--Partial to display track listing and notes section-->
+<section>
+    <div class="container">
+        <div class="trackListing">
+            <h2 class="centre">Track Listing</h2>
+            <img class="center" data-ng-src="{{'resources/music_artwork/' + artwork | imageURI}}" onerror="this.src='no-image.jpg'">
+            <h3 class="centre">{{trackCount}}</h3>
+            <table class="centre position">
+                <tr>
+                    <th>Track No.</th><th>Track Name</th><th>Artist</th><th>Playing Time</th><th>Size</th>
+                </tr>
+                <tr data-ng-repeat="track in tracks">
+                    <td>{{track.track_number}}</td><td>{{track.trackname}}</td><td>{{track.artistname}}</td><td>{{track.total_time | date:'H:mm:ss'}}</td><td>{{track.size | Filesize}}</td>
+
+                </tr>
+            </table>
+        </div>
+    </div>
+</section>
+<section>
+    <!--If there are notes, display them-->
+    <div data-ng-show="notes" class="container notes right">
+        <div class="trackListing">
+            <h3>Notes</h3>
+            <div data-ng-show="!toggledEdit"><p>{{ notes }} <button class="editNote ml" data-ng-click="toggleEditNote(true)">Edit</button></p></div>
+            <form data-ng-submit="updateNote(note)" data-ng-show="toggledEdit">
+                <textarea name="editedNote" data-ng-model="note" id="editedNote" cols="40" placeholder="">{{ notes }}</textarea>
+                <input class="editNote addNoteButton" type="submit" value="Update Note">
+            </form>
+        </div>
+    </div>
+    <div data-ng-hide="notes" class="container notes right">
+        <div>
+            <form class="trackListing" data-ng-submit="addNote(note)">
+                <h3>Add Note</h3>
+                <textarea name="note" data-ng-model="note" id="note" cols="40" placeholder="Type note here"></textarea>
+                <input class="editNote addNoteButton" type="submit" value="Add Note">
+            </form>
+
+        </div>
+    </div>
+</section>
